@@ -45,7 +45,7 @@ func Resolve(includePatterns, skipPatterns []string) ([]string, error) {
 			result = append(result, i)
 		}
 	}
-	return result, err
+	return result, nil
 }
 
 // ResolvePackages accepts a slice of paths with optional "..." placeholder and a slice with paths to be skipped.
@@ -72,7 +72,7 @@ func ResolvePackages(includePatterns, skipPatterns []string) ([][]string, error)
 		}
 		result = append(result, packageFiles)
 	}
-	return result, err
+	return result, nil
 }
 
 func isDir(filename string) bool {
